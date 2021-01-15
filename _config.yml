@@ -234,6 +234,14 @@ chat:
 # Automatically excerpt description in homepage as preamble text.
 excerpt_description: true
 
+auto_excerpt:
+  enable: true
+  length: 150
+
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: false
+
+
 # Read more button
 # If true, the read more button will be displayed in excerpt section.
 read_more_btn: true
@@ -621,7 +629,7 @@ valine:
   placeholder: 写下你的评论吧... # Comment box placeholder
   avatar: mm # Gravatar style
   guest_info: nick,mail,link # Custom comment header
-  pageSize: 10 # Pagination size
+  pageSize: 14 # Pagination size
   language: # Language, available values: en, zh-cn
   visitor: false # Article reading statistic
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
