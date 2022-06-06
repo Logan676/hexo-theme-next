@@ -8,21 +8,21 @@ const { iconText } = require('./common');
 // Add comment
 hexo.extend.filter.register('theme_inject', injects => {
   let theme = hexo.theme.config;
-  if (!theme.valine.enable || !theme.valine.appid || !theme.valine.appkey) return;
+  if (!theme.xiaojiji.enable || !theme.xiaojiji.appid || !theme.xiaojiji.appkey) return;
 
-  injects.comment.raw('valine', '<div class="comments" id="valine-comments"></div>', {}, {cache: true});
+  injects.comment.raw('xiaojiji', '<div class="comments" id="valine-comments"></div>', {}, {cache: true});
 
-  injects.bodyEnd.file('valine', path.join(hexo.theme_dir, 'layout/_third-party/comments/valine.swig'));
+  injects.bodyEnd.file('xiaojiji', path.join(hexo.theme_dir, 'layout/_third-party/comments/valine.swig'));
 
 });
 
 // Add post_meta
 hexo.extend.filter.register('theme_inject', injects => {
   let theme = hexo.theme.config;
-  if (!theme.valine.enable || !theme.valine.appid || !theme.valine.appkey) return;
+  if (!theme.xiaojiji.enable || !theme.xiaojiji.appid || !theme.xiaojiji.appkey) return;
 
-  injects.postMeta.raw('valine', `
-  {% if post.comments and (is_post() or theme.valine.comment_count) %}
+  injects.postMeta.raw('xiaojiji', `
+  {% if post.comments and (is_post() or theme.xiaojiji.comment_count) %}
   <span class="post-meta-item">
     ${iconText('far fa-comment', 'valine')}
     <a title="valine" href="{{ url_for(post.path) }}#valine-comments" itemprop="discussionUrl">
@@ -30,6 +30,6 @@ hexo.extend.filter.register('theme_inject', injects => {
     </a>
   </span>
   {% endif %}
-  `, {}, {}, theme.valine.post_meta_order);
+  `, {}, {}, theme.xiaojiji.post_meta_order);
 
 });

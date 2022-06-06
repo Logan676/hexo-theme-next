@@ -103,7 +103,7 @@
           {%- endif %}
 
           {# LeanCloud PageView #}
-          {%- if theme.leancloud_visitors.enable or (theme.valine.enable and theme.valine.appid and theme.valine.appkey and theme.valine.visitor) %}
+          {%- if theme.leancloud_visitors.enable or (theme.xiaojiji.enable and theme.xiaojiji.appid and theme.xiaojiji.appkey and theme.xiaojiji.visitor) %}
             <span id="{{ url_for(post.path) }}" class="post-meta-item leancloud_visitors" data-flag-title="{{ post.title }}" title="{{ __('post.views') }}">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -222,7 +222,7 @@
             {% include 'my-copyright.swig' %}
           {% endif %}
     </div>
-    
+
     <div>
       {% if not is_index %}
         {% include 'passage-end-tag.swig' %}
