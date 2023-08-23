@@ -34,6 +34,12 @@
       </div>
     </main>
 
+    <div class="floating-button">
+      <a href="http://localhost:4000/admin/#/" target="_blank">
+        <img src="/images/write_blog_dark.png" alt="写博客">
+      </a>
+    </div>
+
     <footer class="footer">
       <div class="footer-inner">
         {% include '_partials/languages.swig' %}
